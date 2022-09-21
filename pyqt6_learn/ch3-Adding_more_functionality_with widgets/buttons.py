@@ -19,7 +19,7 @@ class MainWindow(QWidget):
 
         self.name_label = QLabel("Don't push the button.", self)
         self.name_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.name_label.move(60, 30)
+        # self.name_label.move(60, 30)
 
         self.button = QPushButton("Push Me", self)
         self.button.move(80, 70)
