@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>readonly and disable</title>
+</head>
+<body>
+<form action="http://localhost:8080/oa/save">
+<!--
+  readonly and disable 相同点都是只读, 不可修改
+  但是区别是readonly可以提交给服务器,, disable数据不会提交给服务器
+-->
+  usercode <input type="text" name="usercode" value="110" readonly>
+  <br>
+  username <input type="text" name="username" value="987" disabled>
+  <input type="submit" value="submit">
+</form>
+</body>
+</html>

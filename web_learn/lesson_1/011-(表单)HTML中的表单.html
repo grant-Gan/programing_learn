@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML中的表单form</title>
+</head>
+<body>
+<!--
+  1. 表单用来收集用户信息, 用户填写信息以后发送到服务器.
+  2. 表单action属性中写服务器地址
+      action属性用来指定数据提交给哪个服务器
+      action属性和超链接重点href属性一样, 都可以向服务器发送request
+  3. 表达发送请求的过程中可以携带数据
+-->
+  <form action="http://www.baidu.com">
+    <!-- 画一个提交按钮用来提交表单-->
+    <!--    画一个按钮使用inpput输入域, type="submit"才具有提交表单的能力-->
+    <input type="button" value="这是一个普通按钮. 该属性用于指定button上的文字"> <br> <br>
+
+    <input type="text">
+    <input type="submit" value="表单提交按钮">
+  </form>
+<br>
+<br>
+<br>
+<br>
+<form action="http://localhost:8080/jd/login">
+  用户名<input type="text">
+  密码<input type="password">
+
+  <input type="submit" value="登录">
+</form>
+<br>
+<br>
+<br>
+
+<form  action="http://localhost:8080/jd/login">
+<!--  name非常重要, 没有name是不会提交的-->
+<!--
+整个表单中提交的数据都是name=value
+所以input标签中 name和value属性最后一起被提交上去
+没有name值的input标签不会被提交
+action?name1=value&name2=value&....
+-->
+  <table align="center">
+    <tr align="center">
+      <td>用户名</td>
+      <td><input type="text" name="username" value="defult_value"></td>
+    </tr>
+    <tr align="center">
+      <td>密码</td>
+      <td><input type="password" name="password"></td>
+    </tr>
+    <tr align="center">
+      <td><input type="submit" value="登录"></td>
+      <td><input type="reset" value="清空"></td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>

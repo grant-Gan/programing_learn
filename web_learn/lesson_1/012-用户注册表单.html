@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+  <!--
+  用户注册
+    用户名
+    姓名
+    密码
+    确认密码
+    性别
+    兴趣爱好
+    学历
+    简介
+  -->
+<!--  当method方法== post时, 提交的数据还是一样的, 只不过提交内容不会显示的展现在浏览器地址栏-->
+  <form action="http://localhost:8080/jd/register" method="post">
+    用户名
+    <input type="text" name="username"> <br>
+    密码
+    <input type="password" name="userpwd"> <br>
+    确认密码
+    <input type="password"> <br>
+    性别
+<!-- 单选按钮, 名称相同只能选择一个-->
+<!-- 单选按钮的value必须手动指定-->
+<!-- 想要默认选中, 加入checked  -->
+    <input type="radio" name="gender" value="1" checked>男
+    <input type="radio" name="gender" value="0">女 <br>
+    兴趣爱好
+    <input type="checkbox" name="interest" value="smoke">抽烟
+    <input type="checkbox" name="interest" value="drink">喝酒
+    <input type="checkbox" name="interest" value="perm">喝酒
+    <br>
+    学历
+    <select name="grade">
+      <option value="gz">高中</option>
+      <option value="dx">大学</option>
+      <option value="bk" selected>本科</option>
+      <option value="ss">硕士</option>
+    </select><br>
+    多选
+<!--    size说明了下拉列表显示几个-->
+    <select multiple="multiple" size="5">
+      <option>河南</option>
+      <option>背景</option>
+      <option>山东</option>
+    </select> <br>
+<!--    file控件-->
+    <input type="file" > 文件上传
+    <br>
+<!--    文本域 没有value属性, 用户填写的内容就是value-->
+    简介
+    <textarea rows="10" cols="60" name="introduce">
+
+    </textarea>
+    <input type="submit" value="注册">
+  </form>
+</body>
+</html>
