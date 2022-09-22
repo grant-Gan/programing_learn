@@ -48,6 +48,8 @@ class MainWindows(QWidget):
             print(f"{sender.text()} selected")
         else:
             print(f"{sender.text()} Deselected.")
+
+
 app = QApplication(sys.argv)
 windows = MainWindows()
 sys.exit(app.exec())
