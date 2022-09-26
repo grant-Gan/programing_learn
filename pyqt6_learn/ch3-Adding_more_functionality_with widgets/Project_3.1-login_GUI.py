@@ -2,8 +2,7 @@ import sys
 from PyQt6.QtWidgets import (QWidget, QCheckBox, QLabel, QLineEdit,
                              QPushButton, QApplication, QMessageBox)
 from PyQt6.QtGui import QPixmap, QFont
-
-
+from registration import NewUserDialog
 class UserWindows(QWidget):
     def __init__(self):
         super(UserWindows, self).__init__()
@@ -205,13 +204,6 @@ class ApplicationWindows(QWidget):
                 main_label.move(0, 0)
         except FileNotFoundError as error:
             print(f"Image not found.\nError: {error}")
-
-
-
-class NewUserDialog(QWidget):
-    def __init__(self):
-        super(NewUserDialog, self).__init__()
-        self.setupNewUserDialogUI()
 
 
 app = QApplication(sys.argv)
