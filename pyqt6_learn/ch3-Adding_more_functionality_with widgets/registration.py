@@ -20,7 +20,7 @@ class NewUserDialog(QDialog):
         """Create and arrange widgets in the windows for
         collectiing new account information"""
         login_label = QLabel('Create New Account', self)
-        login_label.setFont(QFont('Arial', 20))
+        login_label.setFont(QFont('Arial', 15))
         login_label.move(90, 20)
 
         # Create Qlabel for image
